@@ -6,7 +6,7 @@ function App() {
   return (
     <>
       <div>
-       
+       <Atividade1 />yui
         <Atividade2 />
       </div>
     </>

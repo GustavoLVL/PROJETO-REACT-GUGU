@@ -13,7 +13,7 @@ function Atividade1() {
 
   return (
     <div>
-      <h1>Contador Interativo</h1>
+      <h1>Contador Interativo do Gustavo</h1>
       <h2>{contador}</h2>
 
       <button onClick={incrementar}>Incrementar</button>
