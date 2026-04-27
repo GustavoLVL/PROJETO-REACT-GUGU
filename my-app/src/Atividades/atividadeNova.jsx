@@ -1,26 +1,34 @@
-import { useState } from "react";
+import { useState } from 'react';
 
 function AtividadeNova() {
-
   const [form, setForm] = useState({
-    livro: "",
-    autor: ""
+    livro: '',
+    autor: ''
   });
+
+  const [dadosCadastrados, setDadosCadastrados] = useState(null);
 
   function handleChange(event) {
     const { name, value } = event.target;
 
-    setForm({
-      ...form,
+    setForm((prevForm) => ({
+      ...prevForm,
       [name]: value
-    });
+    }));
   }
 
   function handleSubmit(event) {
     event.preventDefault();
 
-    console.log("Livro:", form.livro);
-    console.log("Autor:", form.autor);
+    setDadosCadastrados({
+      livro: form.livro,
+      autor: form.autor
+    });
+
+    setForm({
+      livro: '',
+      autor: ''
+    });
   }
 
   return (
@@ -28,34 +36,40 @@ function AtividadeNova() {
       <h2>Cadastro de Livro</h2>
 
       <form onSubmit={handleSubmit}>
-
         <div>
-          <label>Livro:</label>
+          <label htmlFor="livro">Livro:</label>
           <input
+            id="livro"
             type="text"
             name="livro"
             value={form.livro}
             onChange={handleChange}
+            placeholder="Digite o nome do livro"
           />
         </div>
 
         <div>
-          <label>Autor:</label>
+          <label htmlFor="autor">Autor:</label>
           <input
+            id="autor"
             type="text"
             name="autor"
             value={form.autor}
             onChange={handleChange}
+            placeholder="Digite o nome do autor"
           />
         </div>
 
         <button type="submit">Cadastrar</button>
-
       </form>
 
-      <h3>Dados digitados:</h3>
-      <pre>{JSON.stringify(form, null, 2)}</pre>
-
+      {dadosCadastrados && (
+        <div>
+          <h3>Dados digitados:</h3>
+          <p><strong>Livro:</strong> {dadosCadastrados.livro}</p>
+          <p><strong>Autor:</strong> {dadosCadastrados.autor}</p>
+        </div>
+      )}
     </div>
   );
 }
