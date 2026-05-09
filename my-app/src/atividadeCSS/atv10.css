@@ -1,0 +1,88 @@
+.container-vitrine {
+  font-family: Arial, sans-serif;
+  padding: 30px;
+  background-color: #f4f6f8;
+  min-height: 100vh;
+}
+
+.container-vitrine h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #222;
+}
+
+.grid-vitrine {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.card-vitrine {
+  background-color: white;
+  padding: 20px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: 0.3s;
+}
+
+.card-vitrine:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+}
+
+.imagem-ficticia {
+  height: 120px;
+  background-color: #dbeafe;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #1d4ed8;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.card-vitrine h2 {
+  color: #222;
+  font-size: 22px;
+}
+
+.categoria {
+  color: #555;
+  font-size: 16px;
+}
+
+.preco {
+  color: #0f766e;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.card-vitrine button {
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  padding: 12px 22px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.card-vitrine button:hover {
+  background-color: #1e40af;
+}
+
+/* Responsividade simples */
+@media (max-width: 900px) {
+  .grid-vitrine {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .grid-vitrine {
+    grid-template-columns: 1fr;
+  }
+}

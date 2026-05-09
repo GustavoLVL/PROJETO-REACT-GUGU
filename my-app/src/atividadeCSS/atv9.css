@@ -1,0 +1,38 @@
+.container-botoes {
+  font-family: Arial, sans-serif;
+  padding: 30px;
+  text-align: center;
+}
+
+.area-botoes {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.botao {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.sucesso {
+  background-color: green;
+}
+
+.erro {
+  background-color: red;
+}
+
+.aviso {
+  background-color: orange;
+}
+
+.botao:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+}

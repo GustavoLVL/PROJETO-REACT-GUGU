@@ -1,0 +1,25 @@
+.container-alunos {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+.lista-alunos {
+  list-style: none;
+  padding: 0;
+}
+
+.lista-alunos li {
+  font-size: 20px;
+  margin-bottom: 12px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.aprovado {
+  color: green;
+}
+
+.reprovado {
+  color: red;
+}

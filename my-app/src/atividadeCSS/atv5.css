@@ -1,0 +1,54 @@
+.container-filmes {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+.container-filmes h1 {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.lista-filmes {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card-filme {
+  background-color: #f2f2f2;
+  width: 220px;
+  padding: 20px;
+  border: 2px solid #ccc;
+  border-radius: 12px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.card-filme h2 {
+  color: #222;
+  font-size: 22px;
+}
+
+.card-filme p {
+  color: #444;
+  font-size: 16px;
+}
+
+.card-filme button {
+  background-color: #222;
+  color: white;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.card-filme button:hover {
+  background-color: #444;
+}
+
+.card-filme:hover {
+  transform: scale(1.05);
+  background-color: #e6e6e6;
+}
